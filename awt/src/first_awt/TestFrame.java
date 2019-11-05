@@ -33,11 +33,14 @@ public class TestFrame extends Frame implements ComponentListener, FocusListener
         setBackground(Color.BLACK);
         setLayout(null);
 
+        //my buttons
         add(b1 = new MyButton("One"));
         add(b2 = new MyButton("Two"));
+        //default buttons
         add(b3 = new Button("Hide button"));
         add(b4 = new Button("Switch positions"));
         add(b5  = new Button("Change size"));
+        //text area
         add(ta = new TextArea(20,20));
 
         b1.setBackground(Color.BLUE);
@@ -56,6 +59,7 @@ public class TestFrame extends Frame implements ComponentListener, FocusListener
 
         setVisible(true);
 
+        //add listeners (those are from this class otherwise new classes
         b1.addComponentListener(this);
         b1.addFocusListener(this);
         b1.addMouseListener(this);
@@ -65,6 +69,7 @@ public class TestFrame extends Frame implements ComponentListener, FocusListener
         b2.addMouseListener(this);
         b2.addKeyListener(this);
 
+        //action listeners for normal buttons
         b3.addActionListener(new HideListener());
         b4.addActionListener(new SwitchListener());
         b5.addActionListener(new ResizeListener());
