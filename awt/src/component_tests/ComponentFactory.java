@@ -1,8 +1,6 @@
 package component_tests;
 
-import component_tests.components.TestButton;
-import component_tests.components.TestChoice;
-import component_tests.components.TestLabel;
+import component_tests.components.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +13,11 @@ public class ComponentFactory {
         components.put("Label", new TestLabel());
         components.put("Button", new TestButton());
         components.put("Choice", new TestChoice());
+        components.put("List", new TestList());
+        components.put("Checkbox", new TestCheckbox());
+        components.put("Scrollbar", new TestScrollbar());
+        components.put("TextField", new TestTextField());
+        components.put("TextArea", new TestTextArea());
     }
 
     public static void printComponents() {
